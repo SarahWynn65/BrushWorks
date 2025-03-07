@@ -1,0 +1,260 @@
+/* ===== General ===== */
+html {
+    font-size: 20px;
+
+    /* Brown and Yellow color scheme */
+    /* --lightFontColor: #968754;
+    --darkFontColor: #5e5535;
+    --lightBackgroundColor: #ede5c7;
+    --darkBackgroundColor:#d6c892;
+    --lightImageBorder: #facb48;
+    --darkImageBorder: #523e09; */
+    --rainbow: conic-gradient(at 10% 10%, lightblue,red, orange, yellow, palegreen, lightblue);
+
+    /* Warm Color Scheme */
+    /* --lightFontColor: blanchedalmond;
+    --darkFontColor: #362e22;
+    --lightBackgroundColor: blanchedalmond;
+    --darkBackgroundColor:#5c3a2a;
+    --lightImageBorder: #facb48;
+    --darkImageborder: #5c3a2a; */
+
+    /* Green Color Scheme */
+    --lightFontColor: #d5e0df;
+    --darkFontColor: #495452;
+    --lightBackgroundColor: #d5e0df;
+    --darkBackgroundColor: #7d918d;
+    --lightImageBorder: #d5e0df;
+    --darkImageborder: #354744;
+
+    background-color: var(--lightBackgroundColor);
+    width: 100vw;
+}
+body {
+    margin-bottom: 100px;
+}
+
+h1 {
+    font-size: 3rem;
+    text-align: center;
+    color: var(--lightFontColor);
+    margin: 0.7rem;
+    font-weight: 700;
+}
+h3 {
+    font-size: 1.5rem;
+    text-align: center;
+    color: var(--lightFontColor);
+    margin: 1.5rem;
+    font-weight: 600;
+}
+h4 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+p {
+    margin-bottom: 1rem;
+}
+
+.flexRow {
+    display: flex;
+    flex-direction: row;
+}
+
+.flexCol {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== Header ===== */
+header {
+    position: fixed;
+    z-index:100;
+    width: 100%;
+    background-color: var(--lightBackgroundColor);
+    background-image: url(../images/LastSupper.png);
+    background-size: cover;
+    background-position: center center; /* This centers the image both horizontally and vertically */
+}
+nav {
+    display: flex;
+    justify-content: center;
+    /* box-sizing: border-box; */
+    /* padding: .3rem;
+    width: 100%; */
+    /* background-color: var(--darkBackgroundColor); */
+    /* background-image: var(--rainbow); */
+    /* background-image: conic-gradient(at 10% 10%, lightblue,red, orange, yellow, palegreen, lightblue); */
+}
+nav div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+nav a {
+    font-size: 1rem;
+    padding: .5rem 2rem .5rem 2rem;
+    color: var(--lightFontColor);
+}
+
+nav a:hover {
+    transform: scale(1.5);
+    transition-duration: .7s;
+}
+
+
+a:hover + img {
+    height: 100%;
+    width: auto;
+    margin-right: 1rem;
+    background-color: pink;
+}
+
+
+/* ============ Main Section ============ */
+
+.pageContainer {
+    width: 70vw;
+    max-width: 1000px;
+    padding-top:12rem;
+    margin-right: auto;
+    margin-left: auto;
+    color: var(--darkFontColor);
+}
+/* ===== Home Page ===== */
+#homeContainer {
+    display:flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    background-color: var(--rainbow);
+}
+
+#homeContainer p {
+    font-size: 1rem;
+    margin: 0.5rem;
+}
+
+/* ===== Classes Page ===== */
+#classesContainer {
+    flex-direction: column;
+}
+#classesContainer img {
+    /* border: 1.5rem ridge #5c3a2a; */
+    border: 1.5rem ridge var(--darkImageborder);
+    margin:7px;
+    width: 15rem;
+    box-shadow: 5px 5px 3px;
+}
+#studioPhotoContainer {
+    display: flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content: center;
+}
+#starryNight {
+    transform: rotate(3deg);
+}
+#studioPhoto1 {
+    transform: rotate(3deg);
+}
+studioPhoto2 {
+    transform: rotate(-2deg);
+}
+studioPhoto3 {
+    transform: rotate(1deg);
+}
+
+/* ===== Gallery Page ===== */
+#galleryContainer {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items:center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    max-width:90vw;
+    margin-right:auto;
+    margin-left:auto;
+}
+#thumbnailSection {
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top:1.3rem;
+}
+.websiteThumbnail {
+    width: 15rem;
+    margin: 20px;
+}
+.websiteThumbnail img {
+    max-width: 100%;
+    height: auto;
+    display:block;
+    border: 1.5rem ridge var(--darkImageborder);
+    box-shadow: 5px 5px 3px;
+    z-index: -1;
+    transition: transform 1.5s;
+}
+.websiteThumbnail img:hover {
+    transform: scale(1.7);
+    transition-duration: 1.5s;
+}
+.websiteThumbnail p {
+    text-align: center;
+    padding: 0.25rem;
+    margin-top:1rem;
+    margin-left: 3rem;
+}
+
+#gallery1 {
+    transform: rotate(3deg);
+}
+#gallery2 {
+    transform:rotate(-2deg);
+}
+#gallery3 {
+    transform:rotate(5deg);
+}
+#gallery4 {
+    transform:rotate(-1deg);
+}
+#gallery5 {
+    transform:rotate(3deg);
+}
+#gallery6 {
+    transform:rotate(1deg);
+}
+#gallery7 {
+    transform:rotate(2deg);
+}
+#gallery8 {
+    transform:rotate(-4deg);
+}
+#gallery9 {
+    transform:rotate(-6deg);
+}
+
+
+/* ===== Contact Page ===== */
+#contactContainer {
+    flex-direction: column;
+}
+
+
+
+/* ===== Footer ===== */
+footer {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 10px;
+    color: var(--lightFontColor);
+    background-color: var(--darkBackgroundColor);
+    text-align: center;
+}
