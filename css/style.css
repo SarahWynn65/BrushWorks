@@ -20,7 +20,7 @@ html {
     --darkImageborder: #5c3a2a; */
 
     /* Monet Lilies Color Scheme */
-    --lightFontColor: #d5e0df;
+    --lightFontColor: #f5de84;
     --darkFontColor: #495452;
     /* --lightBackgroundColor: #d5e0df; */
     --lightBackgroundColor: #c8cfb8;
@@ -28,11 +28,14 @@ html {
     /* --lightImageBorder: #d5e0df; */
     --lightImageBorder: #f5de84;
     --darkImageborder: #354744;
+    --textShadow: #7d918d;
 
     background-color: var(--lightBackgroundColor);
     width: 100vw;
 }
 body {
+    display:flex;
+    flex-direction: column;
     margin-bottom: 100px;
 }
 
@@ -42,6 +45,7 @@ h1 {
     color: var(--lightFontColor);
     margin: 0.7rem;
     font-weight: 700;
+    text-shadow: 3px 3px var(--textShadow);
 }
 h2 {
     font-size: 1.5rem;
@@ -49,6 +53,7 @@ h2 {
     color: var(--lightFontColor);
     margin: 1.5rem;
     font-weight: 600;
+    text-shadow: 2px 2px var(--textShadow);
 }
 h3 {
     font-size: 1.5rem;
@@ -78,17 +83,18 @@ p {
 
 /* ===== Header ===== */
 header {
+    display:flex;
+    flex-direction: column;
     position: fixed;
     z-index:100;
     width: 100%;
     background-color: var(--lightBackgroundColor);
-    /* background-image: url(../images/LastSupper.png); */
     background-image: url(../images/MonetWaterLilies.jpg);
     background-size: cover;
     background-position: center center; /* This centers the image both horizontally and vertically */
     border-bottom: 10px solid var(--lightImageBorder);
+    border-top: 10px solid var(--lightImageBorder);
     padding: 15px;
-    /* border-image: url(../images/VanGoghIrises.png) 30 stretch; */
 }
 nav {
     display: flex;
@@ -110,20 +116,18 @@ nav a {
     font-size: 1rem;
     padding: .5rem 2rem .5rem 2rem;
     color: var(--lightFontColor);
+    text-shadow: 2px 2px var(--textShadow);
 }
-
 nav a:hover {
     transform: scale(1.5);
     transition-duration: .7s;
 }
-
-
-a:hover + img {
+/* a:hover + img {
     height: 100%;
     width: auto;
     margin-right: 1rem;
     background-color: pink;
-}
+} */
 
 
 /* ============ Main Section ============ */
@@ -150,7 +154,6 @@ a:hover + img {
 }
 
 #contactDiv {
-    margin-top:10rem;
     background-color: #c8cfb8;
 }
 
@@ -160,30 +163,59 @@ a:hover + img {
     flex-direction: column;
 }
 
-#classesContainer img {
-    /* border: 1.5rem ridge #5c3a2a; */
+/* Styling for border for all images in classes */
+/* #classesContainer img {
     border: 1.5rem ridge var(--darkImageborder);
-    margin:7px;
-    width: 15rem;
+    margin: 7px;
     box-shadow: 5px 5px 3px;
+} */
+
+/* Styling specifically for class images in the classesContainer */
+#classImageContainer {
+    width: 80%;
+    height: auto;
 }
-#studioPhotoContainer {
+#starryNight {
+    border: 1.5rem ridge var(--darkImageborder);
+    margin: 7px;
+    box-shadow: 5px 5px 3px;
+    transform: rotate(3deg);
+}
+
+#studioPhotoDiv {
     display: flex;
     flex-direction:row;
     flex-wrap:wrap;
     justify-content: center;
 }
-#starryNight {
-    transform: rotate(3deg);
+/* Styling specifically for studio images in the classesContainer */
+.studioPhotoContainer {
+    width: 50%;
+    height: auto;
 }
 #studioPhoto1 {
+    border: 1.5rem ridge var(--darkImageborder);
+    margin: 7px;
+    box-shadow: 5px 5px 3px;
     transform: rotate(3deg);
+    width:100%;
+    height:auto;
 }
-studioPhoto2 {
+#studioPhoto2 {
+    border: 1.5rem ridge var(--darkImageborder);
+    margin: 7px;
+    box-shadow: 5px 5px 3px;
     transform: rotate(-2deg);
+    width:100%;
+    height:auto;
 }
-studioPhoto3 {
+#studioPhoto3 {
+    border: 1.5rem ridge var(--darkImageborder);
+    margin: 7px;
+    box-shadow: 5px 5px 3px;
     transform: rotate(1deg);
+    width:100%;
+    height:auto;
 }
 
 /* ===== Gallery Page ===== */
@@ -208,6 +240,10 @@ studioPhoto3 {
 .websiteThumbnail {
     width: 15rem;
     margin: 20px;
+    z-index:1;
+}
+.websiteThumbnail:hover {
+    z-index: 40;
 }
 .websiteThumbnail img {
     max-width: 100%;
@@ -215,8 +251,9 @@ studioPhoto3 {
     display:block;
     border: 1.5rem ridge var(--darkImageborder);
     box-shadow: 5px 5px 3px;
-    z-index: -1;
+    z-index: 1; /* this is at the back */
     transition: transform 1.5s;
+    position: relative; /* This is needed so that on hover the image will be brought to the front using the z-index; */
 }
 .websiteThumbnail img:hover {
     transform: scale(1.7);
@@ -278,4 +315,5 @@ footer {
     color: var(--lightFontColor);
     background-color: var(--darkBackgroundColor);
     text-align: center;
+    z-index:100;
 }
