@@ -171,7 +171,7 @@ nav a:hover {
 } */
 
 /* Styling specifically for class images in the classesContainer */
-#classImageContainer {
+#starryNightContainer {
     width: 80%;
     height: auto;
 }
@@ -180,6 +180,22 @@ nav a:hover {
     margin: 7px;
     box-shadow: 5px 5px 3px;
     transform: rotate(3deg);
+    width:100%;
+}
+#saintGeorgesContainer {
+    width: 80%;
+    height: auto;
+}
+#saintGeorges {
+    border: 1.5rem ridge var(--darkImageborder);
+    margin: 1rem;
+    box-shadow: 5px 5px 3px;
+    transform: rotate(-2deg);
+    width:100%;
+    box-sizing: border-box;
+}
+#saintGeorgesContainer + div  {
+    margin: 2rem;
 }
 
 #studioPhotoDiv {
