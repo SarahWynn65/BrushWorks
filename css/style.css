@@ -149,6 +149,11 @@ a:hover + img {
     margin: 0.5rem;
 }
 
+#contactDiv {
+    margin-top:10rem;
+    background-color: #c8cfb8;
+}
+
 /* ===== Classes Page ===== */
 
 #classesContainer {
