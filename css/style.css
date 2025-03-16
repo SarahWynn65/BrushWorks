@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 /* ===== General ===== */
 html {
     font-size: 20px;
@@ -34,8 +41,13 @@ html {
     width: 100vw;
 }
 body {
+    display:-webkit-box;
+    display:-ms-flexbox;
     display:flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     margin-bottom: 100px;
 }
 
@@ -72,19 +84,34 @@ p {
 }
 
 .flexRow {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
 }
 
 .flexCol {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 
 /* ===== Header ===== */
 header {
+    display:-webkit-box;
+    display:-ms-flexbox;
     display:flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     position: fixed;
     z-index:100;
     width: 100%;
@@ -97,8 +124,12 @@ header {
     padding: 15px;
 }
 nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     /* box-sizing: border-box; */
     /* padding: .3rem;
     width: 100%; */
@@ -107,10 +138,19 @@ nav {
     /* background-image: conic-gradient(at 10% 10%, lightblue,red, orange, yellow, palegreen, lightblue); */
 }
 nav div {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 nav a {
     font-size: 1rem;
@@ -119,8 +159,12 @@ nav a {
     text-shadow: 2px 2px var(--textShadow);
 }
 nav a:hover {
-    transform: scale(1.5);
-    transition-duration: .7s;
+    -webkit-transform: scale(1.5);
+        -ms-transform: scale(1.5);
+            transform: scale(1.5);
+    -webkit-transition-duration: .7s;
+         -o-transition-duration: .7s;
+            transition-duration: .7s;
 }
 /* a:hover + img {
     height: 100%;
@@ -142,9 +186,15 @@ nav a:hover {
 }
 /* ===== Home Page ===== */
 #homeContainer {
+    display:-webkit-box;
+    display:-ms-flexbox;
     display:flex;
-    flex-direction: column;
-    box-sizing: border-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     background-color: var(--rainbow);
 }
 
@@ -160,7 +210,10 @@ nav a:hover {
 /* ===== Classes Page ===== */
 
 #classesContainer {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 
 /* Styling for border for all images in classes */
@@ -178,8 +231,11 @@ nav a:hover {
 #starryNight {
     border: 1.5rem ridge var(--darkImageborder);
     margin: 7px;
-    box-shadow: 5px 5px 3px;
-    transform: rotate(3deg);
+    -webkit-box-shadow: 5px 5px 3px;
+            box-shadow: 5px 5px 3px;
+    -webkit-transform: rotate(3deg);
+        -ms-transform: rotate(3deg);
+            transform: rotate(3deg);
     width:100%;
 }
 #saintGeorgesContainer {
@@ -189,20 +245,32 @@ nav a:hover {
 #saintGeorges {
     border: 1.5rem ridge var(--darkImageborder);
     margin: 1rem;
-    box-shadow: 5px 5px 3px;
-    transform: rotate(-2deg);
+    -webkit-box-shadow: 5px 5px 3px;
+            box-shadow: 5px 5px 3px;
+    -webkit-transform: rotate(-2deg);
+        -ms-transform: rotate(-2deg);
+            transform: rotate(-2deg);
     width:100%;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 #saintGeorgesContainer + div  {
     margin: 2rem;
 }
 
 #studioPhotoDiv {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction:row;
-    flex-wrap:wrap;
-    justify-content: center;
+    -webkit-box-orient:horizontal;
+    -webkit-box-direction:normal;
+        -ms-flex-direction:row;
+            flex-direction:row;
+    -ms-flex-wrap:wrap;
+        flex-wrap:wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 /* Styling specifically for studio images in the classesContainer */
 .studioPhotoContainer {
@@ -212,45 +280,71 @@ nav a:hover {
 #studioPhoto1 {
     border: 1.5rem ridge var(--darkImageborder);
     margin: 7px;
-    box-shadow: 5px 5px 3px;
-    transform: rotate(3deg);
+    -webkit-box-shadow: 5px 5px 3px;
+            box-shadow: 5px 5px 3px;
+    -webkit-transform: rotate(3deg);
+        -ms-transform: rotate(3deg);
+            transform: rotate(3deg);
     width:100%;
     height:auto;
 }
 #studioPhoto2 {
     border: 1.5rem ridge var(--darkImageborder);
     margin: 7px;
-    box-shadow: 5px 5px 3px;
-    transform: rotate(-2deg);
+    -webkit-box-shadow: 5px 5px 3px;
+            box-shadow: 5px 5px 3px;
+    -webkit-transform: rotate(-2deg);
+        -ms-transform: rotate(-2deg);
+            transform: rotate(-2deg);
     width:100%;
     height:auto;
 }
 #studioPhoto3 {
     border: 1.5rem ridge var(--darkImageborder);
     margin: 7px;
-    box-shadow: 5px 5px 3px;
-    transform: rotate(1deg);
+    -webkit-box-shadow: 5px 5px 3px;
+            box-shadow: 5px 5px 3px;
+    -webkit-transform: rotate(1deg);
+        -ms-transform: rotate(1deg);
+            transform: rotate(1deg);
     width:100%;
     height:auto;
 }
 
 /* ===== Gallery Page ===== */
 #galleryContainer {
+    display:-webkit-box;
+    display:-ms-flexbox;
     display:flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items:center;
-    flex-wrap: wrap;
-    box-sizing: border-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align:center;
+        -ms-flex-align:center;
+            align-items:center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     max-width:90vw;
     margin-right:auto;
     margin-left:auto;
 }
 #thumbnailSection {
+    display:-webkit-box;
+    display:-ms-flexbox;
     display:flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-top:1.3rem;
 }
 .websiteThumbnail {
@@ -266,14 +360,23 @@ nav a:hover {
     height: auto;
     display:block;
     border: 1.5rem ridge var(--darkImageborder);
-    box-shadow: 5px 5px 3px;
+    -webkit-box-shadow: 5px 5px 3px;
+            box-shadow: 5px 5px 3px;
     z-index: 1; /* this is at the back */
+    -webkit-transition: -webkit-transform 1.5s;
+    transition: -webkit-transform 1.5s;
+    -o-transition: transform 1.5s;
     transition: transform 1.5s;
+    transition: transform 1.5s, -webkit-transform 1.5s;
     position: relative; /* This is needed so that on hover the image will be brought to the front using the z-index; */
 }
 .websiteThumbnail img:hover {
-    transform: scale(1.7);
-    transition-duration: 1.5s;
+    -webkit-transform: scale(1.7);
+        -ms-transform: scale(1.7);
+            transform: scale(1.7);
+    -webkit-transition-duration: 1.5s;
+         -o-transition-duration: 1.5s;
+            transition-duration: 1.5s;
 }
 .websiteThumbnail p {
     text-align: center;
@@ -283,37 +386,58 @@ nav a:hover {
 }
 
 #gallery1 {
-    transform: rotate(3deg);
+    -webkit-transform: rotate(3deg);
+        -ms-transform: rotate(3deg);
+            transform: rotate(3deg);
 }
 #gallery2 {
-    transform:rotate(-2deg);
+    -webkit-transform:rotate(-2deg);
+        -ms-transform:rotate(-2deg);
+            transform:rotate(-2deg);
 }
 #gallery3 {
-    transform:rotate(5deg);
+    -webkit-transform:rotate(5deg);
+        -ms-transform:rotate(5deg);
+            transform:rotate(5deg);
 }
 #gallery4 {
-    transform:rotate(-1deg);
+    -webkit-transform:rotate(-1deg);
+        -ms-transform:rotate(-1deg);
+            transform:rotate(-1deg);
 }
 #gallery5 {
-    transform:rotate(3deg);
+    -webkit-transform:rotate(3deg);
+        -ms-transform:rotate(3deg);
+            transform:rotate(3deg);
 }
 #gallery6 {
-    transform:rotate(1deg);
+    -webkit-transform:rotate(1deg);
+        -ms-transform:rotate(1deg);
+            transform:rotate(1deg);
 }
 #gallery7 {
-    transform:rotate(2deg);
+    -webkit-transform:rotate(2deg);
+        -ms-transform:rotate(2deg);
+            transform:rotate(2deg);
 }
 #gallery8 {
-    transform:rotate(-4deg);
+    -webkit-transform:rotate(-4deg);
+        -ms-transform:rotate(-4deg);
+            transform:rotate(-4deg);
 }
 #gallery9 {
-    transform:rotate(-6deg);
+    -webkit-transform:rotate(-6deg);
+        -ms-transform:rotate(-6deg);
+            transform:rotate(-6deg);
 }
 
 
 /* ===== Contact Page ===== */
 #contactContainer {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     /* background-image: url(../images/MonetSunrise.jpg); */
 }
 
@@ -321,12 +445,17 @@ nav a:hover {
 
 /* ===== Footer ===== */
 footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     position: fixed;
     bottom: 0;
     width: 100vw;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     padding: 10px;
     color: var(--lightFontColor);
     background-color: var(--darkBackgroundColor);
